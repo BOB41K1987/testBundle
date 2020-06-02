@@ -1,0 +1,5 @@
+test_service:
+    use_expression_language: false
+    types:
+      - { decision: 'some decision', class: ClassName }
+      - { decision: 'some decision 2', class: ClassName2 }
