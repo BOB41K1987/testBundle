@@ -23,6 +23,8 @@ final class TestService
      */
     public function __construct(bool $useExpressionLanguage = false, array $types = [])
     {
+        dump($useExpressionLanguage, $types);
+
         $this->useExpressionLanguage = $useExpressionLanguage;
         $this->types = $types;
     }

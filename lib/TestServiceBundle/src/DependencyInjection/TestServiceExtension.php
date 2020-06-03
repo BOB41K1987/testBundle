@@ -19,6 +19,8 @@ final class TestServiceExtension extends Extension
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
 
-        dd($config);
+        $definition = $container->getDefinition('test_service_bundle.test_service');
+        $definition->setArgument(0, $config['use_expression_language']);
+        $definition->setArgument(1, $config['types']);
     }
 }
